@@ -1,0 +1,8 @@
+name = "ignite-cms-kv"
+main = "src/index.ts"
+compatibility_date = "2024-01-15"
+
+[[kv_namespaces]]
+binding = "IGNITE_CMS"
+id = "565bdea8c3c94ddfb3dc2c752e177a2d"
+

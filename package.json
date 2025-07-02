@@ -1,0 +1,53 @@
+{
+  "name": "cloudflare-mantine-cms-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.812.0",
+    "@aws-sdk/s3-request-presigner": "^3.812.0",
+    "@hello-pangea/dnd": "^18.0.1",
+    "@mantine/carousel": "^8.1.0",
+    "@mantine/core": "8.0.1",
+    "@mantine/dates": "^8.0.1",
+    "@mantine/form": "^8.0.2",
+    "@mantine/hooks": "8.0.1",
+    "@mantine/modals": "^8.1.0",
+    "@mantine/notifications": "^8.0.1",
+    "@tabler/icons-react": "^3.34.0",
+    "dayjs": "^1.11.7",
+    "embla-carousel": "^8.5.2",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.5.2",
+    "jquery": "^3.6.0",
+    "next": "15.2.3",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "stripe": "^18.2.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/node": "22.13.11",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "eslint": "9.23.0",
+    "eslint-config-next": "15.2.3",
+    "postcss": "^8.5.3",
+    "postcss-preset-mantine": "1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^4.1.7",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "yarn@4.9.1"
+}

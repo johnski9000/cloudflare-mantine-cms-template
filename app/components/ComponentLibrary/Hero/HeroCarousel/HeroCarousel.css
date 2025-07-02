@@ -1,0 +1,153 @@
+/* Hero Carousel Styles - Mantine Carousel Optimized */
+
+/* Ensure consistent height across all devices */
+#hero-carousel {
+  margin-top: 100px !important;
+  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height where supported */
+  min-height: 600px; /* Fallback minimum */
+  max-height: 1080px; /* Prevent excessive height on large screens */
+}
+
+/* Prevent horizontal overflow */
+#hero-carousel {
+  overflow-x: hidden;
+}
+
+/* Content animations - always animate since Mantine handles slide transitions */
+.content-box {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Optimize image loading */
+.parallax-bg {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  /* Force GPU acceleration for smoother transitions */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Button hover effects */
+.link-box .group {
+  transition: all 0.3s ease;
+}
+
+.link-box .group:hover {
+  transform: translateY(-2px);
+}
+
+/* Mantine Carousel customizations */
+.mantine-Carousel-root {
+  height: 100vh !important;
+}
+
+.mantine-Carousel-viewport {
+  height: 100vh !important;
+}
+
+.mantine-Carousel-container {
+  height: 100vh !important;
+}
+
+.mantine-Carousel-slide {
+  height: 100vh !important;
+}
+
+/* Custom indicator styling */
+.mantine-Carousel-indicators {
+  bottom: 2rem !important;
+  gap: 0.5rem;
+}
+
+.mantine-Carousel-indicator {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.mantine-Carousel-indicator[data-active] {
+  background-color: white !important;
+  transform: scale(1.25) !important;
+}
+
+/* Custom control styling */
+.mantine-Carousel-control {
+  border: none !important;
+  background-color: transparent !important;
+  color: white !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.mantine-Carousel-control:hover {
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+
+.mantine-Carousel-control:disabled {
+  opacity: 0.3 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero-carousel,
+  .mantine-Carousel-root,
+  .mantine-Carousel-viewport,
+  .mantine-Carousel-container,
+  .mantine-Carousel-slide {
+    min-height: 500px !important;
+  }
+
+  .content-box {
+    padding: 1rem;
+  }
+
+  .mantine-Carousel-indicators {
+    bottom: 1rem !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .content-box {
+    transition: none;
+  }
+
+  .mantine-Carousel-slide {
+    transition: none !important;
+  }
+
+  .link-box .group:hover {
+    transform: none;
+  }
+
+  .mantine-Carousel-indicator {
+    transition: none !important;
+  }
+}
+
+/* Loading state optimization */
+.parallax-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+/* Show placeholder gradient while image loads */
+.parallax-bg:not([style*="background-image"])::before {
+  opacity: 1;
+}
