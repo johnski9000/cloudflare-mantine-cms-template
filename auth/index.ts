@@ -21,8 +21,8 @@ const authOptions: AuthOptions = {
         };
         if (
           credentials &&
-          credentials.username === "jsmith" &&
-          credentials.password === "password"
+          credentials.username === process.env.NEXTAUTH_USER &&
+          credentials.password === process.env.NEXTAUTH_PASSWORD
         ) {
           return user;
         } else {
